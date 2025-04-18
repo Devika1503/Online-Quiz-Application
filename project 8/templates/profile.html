@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+    <h1>User Profile</h1>
+    <div class="container">
+        <h2>User Details</h2>
+        <div class="user-details">
+            <p><span>Username</span> {{ user.username }}</p>
+            <p><span>Email</span> {{ user.email }}</p>
+            <p><span>Phone Number</span> {{ user.phone_number }}</p>
+        </div>
+    </div>
+    <h2>Quiz Results</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Quiz</th>
+            <th>Result</th>
+        </tr>
+        {% for quiz, result in quiz_results %}
+        <tr>
+            <td>{{ current_date }}</td>
+            <td>{{ quiz }}</td>
+            <td>{{ result }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

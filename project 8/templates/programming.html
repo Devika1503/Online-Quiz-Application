@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/programming.css') }}">
+</head>
+<body>
+    {% if 'email' in session and session['email'] == 'a@gmail.com' %}
+        <header>
+            <div class="header-options">
+                <a href="/c_admin">C Questions</a></li>
+                <a href="/py_admin">Python Questions</a></li>
+                <a href="/java_admin">Java Questions</a></li>
+            </div>
+        </header>
+    {% endif %} 
+
+    <main>
+        <h1>Programming Languages</h1>
+        <div class="container">
+            <div class="box">
+                <a href="/c">
+                    <img src="/static/images//c1.jpg" alt="C" width="300" height="300">
+                    <div class="name">C</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="/py">
+                    <img src="/static/images/python.jpg_cropX1=0&cropX2=3988&cropY1=202&cropY2=2445" alt="Python" width="300" height="300">
+                    <div class="name">Python</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="/java">
+                    <img src="/static/images/java1.jpg" alt="Java" width="300" height="300">
+                    <div class="name">Java</div>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

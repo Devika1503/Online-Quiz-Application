@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    height: 70px;
+  }
+  
+  .header-options {
+    display: flex;
+  }
+  
+  .header-options a {
+    font-family: Arial, sans-serif;
+    color: #dfff00;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+
+h1 {
+    text-align: center;
+    color: #44c569;
+}
+
+p{
+    padding: 10px;
+    font-size: larger;
+}
+

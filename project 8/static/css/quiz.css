@@ -1,0 +1,55 @@
+main {
+    display: flex;
+    justify-content: center;
+    /* height: 100vh; */
+    margin: 0;
+}
+
+main form {
+    margin-bottom: 20px; 
+}
+
+h1{
+    text-align: center;
+    color:brown
+}
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.question-box {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-box p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px auto 5px;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkblue;
+}

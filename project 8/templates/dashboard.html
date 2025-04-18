@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash board</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-options">
+            <a href="/profile">Profile</a>
+            <a href="/">Logout</a>
+        </div>
+    </header>
+    <main>
+        <h1 style="color: #FF6A3D">Welcome to Dashboard</h1>
+        <div class="container">
+            <a href="/programming" style="text-decoration: none">
+                <div class="box">
+                    <img src="/static/images/pl.jpg" alt="Image 1" width="300px" height="300px">
+                    <div class="name">Programming Languages</div>
+                </div>
+            </a>
+            <a href="/frontend" style="text-decoration: none">
+                <div class="box">
+                    <img src="/static/images/frontend.avif" alt="Image 2" width="300px" height="300px">
+                    <div class="name">Frontend</div>
+                </div>
+            </a>
+            <a href="/dbms" style="text-decoration: none">
+                <div class="box">
+                    <img src="/static/images/db.jpg" alt="Image 4" width="500px" height="500px">
+                    <div class="name">Database Languages</div>
+                </div>
+            </a>
+         </div>  
+    </main>
+</body>
+</html>

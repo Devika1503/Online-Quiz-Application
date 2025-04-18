@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffdd0;
+}
+
+h1 {
+  margin: 50px;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  height: 70px;
+}
+
+.header-options {
+  display: flex;
+}
+
+.header-options a {
+  font-family: Arial, sans-serif;
+  color: #dfff00;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 20px; /* Add margin to separate boxes */
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.name {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding-top: 20px; /* Adjusted padding */
+  padding-bottom: 20px; /* Adjusted padding */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.box:hover .name {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .box {
+      flex: 1 1 100%;
+  }
+}

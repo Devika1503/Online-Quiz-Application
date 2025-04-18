@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/static/css/c_admin.css">
+</head>
+<body>
+    <header>
+        <div class="header-options">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/">Logout</a>
+        </div>
+    </header>
+    <h1 style="text-align: center; color: blueviolet;">Add Questions</h1>
+    <div class="admin">
+        <form method="post" action="/html_admin">
+            <div class="question-box">
+                <textarea id="question" name="question" placeholder="Question" required></textarea>
+            </div>
+            <div class="options">
+                <div class="option-box">
+                    <input type="text" id="option1" name="option1" placeholder="Option1" required>
+                </div>
+                <div class="option-box">
+                    <input type="text" id="option2" name="option2" placeholder="Option2" required>
+                </div>
+                <div class="option-box">
+                    <input type="text" id="option3" name="option3" placeholder="Option3" required>
+                </div>
+                <div class="option-box">
+                    <input type="text" id="option4" name="option4" placeholder="Option4" required>
+                </div>
+                <div class="option-box">
+                    <input type="text" id="answer" name="answer" placeholder="Answer" required>
+                </div>
+                <div class="submit" style="text-align: center;">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+        {% if error_message %}
+        <p style="color: red; text-align: center;">{{ error_message }}</p>
+        {% endif %}
+        {% if success_message %}
+        <p style="color: rgb(9, 163, 68); text-align: center;">{{ success_message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

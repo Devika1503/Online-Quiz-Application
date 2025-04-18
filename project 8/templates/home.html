@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <a href="/register"><button class="sign-up-button" style="font-size: 15px;">Sign Up</button></a>
+    </div>
+    <div class="tagline">Test yourself and learn with our engaging online quizzes!</div>
+    <div class="info">
+      Participate in quizzes anytime, anywhere, and challenge yourself to improve your skills and expand your knowledge.
+    </div>
+    <div class="sub-container">
+      <form action="/" method="post">
+        <input type="email" name="email" placeholder="Email address" class="email" required style="font-size: 15px;">
+        <button type="submit" class="start" style="font-size: 15px;">Get Started</button>
+      </form>
+      {% if login_error %}
+      <p style="color: red; font-size: 20px;">{{ login_error }}</p> <!-- Display error message in red color -->
+      {% endif %}
+      {% if error_message %}
+      <p style="color: red; font-size: 20px;">{{ error_message }}</p> <!-- Display error message in red color -->
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

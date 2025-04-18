@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/programming.css') }}">
+</head>
+<body>
+    {% if 'email' in session and session['email'] == 'a@gmail.com' %}
+        <header>
+            <div class="header-options">
+                <a href="/html_admin">Html Questions</a></li>
+                <a href="/css_admin">Css Questions</a></li>
+            </div>
+        </header>
+    {% endif %} 
+
+    <main>
+        <h1>Frontend</h1>
+        <div class="container">
+            <div class="box">
+                <a href="/html">
+                    <img src="/static/images/html.jpg" alt="HTML" width="300" height="300">
+                    <div class="name">Html</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="/css">
+                    <img src="/static/images/css.jpg" alt="CSS" width="300" height="300">
+                    <div class="name">Css</div>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
